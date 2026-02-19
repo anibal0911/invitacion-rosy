@@ -53,7 +53,10 @@ async function verificarConfirmacion(){
 if(!id) return;
 
 try{
-const res = await fetch(`${SCRIPT_URL}?id=${id}`);
+const res = await fetch(`${SCRIPT_URL}?id=${id}`,{
+  method: "GET",
+  mode: "cors"
+});
 const data = await res.json();
 
 if(data.existe){
@@ -82,8 +85,12 @@ Lugares: ${lugares}`;
 
 try{
 await fetch(SCRIPT_URL,{
-method:"POST",
-body:JSON.stringify({nombre,lugares,id})
+  method: "POST",
+  mode: "cors",
+  headers: {
+    "Content-Type": "text/plain"
+  },
+  body: JSON.stringify({nombre,lugares,id})
 });
 }catch(e){
 console.log("Error guardando confirmación");
