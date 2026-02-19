@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra Boda</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PORTADA -->
+<section class="pagina portada">
+<div class="overlay"></div>
+<div class="contenido portada-contenido">
+<h1 class="novios">
+Rosy
+<span class="amp">&</span>
+Kevin
+</h1>
+<p class="frase">Nos casamos y queremos compartir este momento contigo</p>
+</div>
+</section>
+
+<!-- INVITADO -->
+<section class="pagina">
+<div class="contenido">
+<h2 class="titulo-seccion">¡Estás invitado!</h2>
+
+<h3 id="nombreInvitado" class="nombre-invitado"></h3>
+
+<p class="lugares">
+Lugares reservados:
+<strong id="lugaresInvitado"></strong>
+</p>
+
+<p id="mensajeConfirmado" class="estado"></p>
+
+</div>
+</section>
+
+<!-- CONTADOR -->
+<section class="pagina">
+<div class="contenido">
+<h2 class="titulo-seccion">Cuenta regresiva</h2>
+
+<div class="marco-contador">
+<svg viewBox="0 0 300 300" class="svg-marco">
+<circle cx="150" cy="150" r="140" stroke="#d4af37" stroke-width="2" fill="none"/>
+<circle cx="150" cy="150" r="120" stroke="#e6c77a" stroke-width="1" fill="none" stroke-dasharray="5 5"/>
+</svg>
+
+<div id="contador" class="contador-texto"></div>
+</div>
+</div>
+</section>
+
+<!-- DETALLES -->
+<section class="pagina">
+<div class="contenido detalles">
+<h2 class="titulo-seccion">Detalles de la boda</h2>
+
+<div class="detalle-item">
+<h3>Fecha</h3>
+<p>28 Marzo 2026</p>
+</div>
+
+<div class="detalle-item">
+<h3>Hora</h3>
+<p>3:00 PM</p>
+</div>
+
+<div class="detalle-item">
+<h3>Lugar</h3>
+<p>Finca (Nombre aquí)</p>
+
+<div class="botones-mapa">
+<a href="https://waze.com/ul?ll=14.6349,-90.5069&navigate=yes" target="_blank" class="btn">
+Ver en Waze
+</a>
+
+<a href="https://www.google.com/maps/search/?api=1&query=14.6349,-90.5069"
+target="_blank" class="btn">
+Ver en Maps
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- GALERÍA SLIDER -->
+<section class="pagina">
+<div class="contenido">
+<h2 class="titulo-seccion">Retratos de nuestro amor</h2>
+
+<div class="slider">
+
+<button class="slide-btn prev">&#10094;</button>
+
+<div class="slides">
+<img src="files/foto1.jpg" alt="Rosy y Kevin 1">
+<img src="files/foto2.jpg" alt="Rosy y Kevin 2">
+<img src="files/foto3.jpg" alt="Rosy y Kevin 3">
+</div>
+
+<button class="slide-btn next">&#10095;</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONFIRMACION -->
+<section class="pagina">
+<div class="contenido">
+<h2 class="titulo-seccion">Confirma tu asistencia antes del 15 de marzo</h2>
+
+<button id="btnConfirmar" class="btn btn-principal">
+Confirmar asistencia
+</button>
+
+<p id="estadoConfirmacion" class="estado"></p>
+</div>
+</section>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
