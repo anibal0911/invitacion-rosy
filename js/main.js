@@ -78,7 +78,7 @@ verificarConfirmacion();
 if(btn){
 btn.addEventListener("click", async ()=>{
 
-const mensaje = `Hola Rosy y Kevin 💍✨
+const mensaje = `Hola Rosy y Kevin \u{1F48D} \u{2728}
 Confirmo mi asistencia:
 Nombre: ${nombre}
 Lugares: ${lugares}`;

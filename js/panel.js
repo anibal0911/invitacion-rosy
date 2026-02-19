@@ -13,7 +13,7 @@ const id = crypto.randomUUID();
 
 const link = `${window.location.origin}/invitacion-rosy/index.html?nombre=${encodeURIComponent(nombre)}&lugares=${lugares}&id=${id}`;
 
-const mensaje = `Hola ${nombre} 💌
+const mensaje = `Hola ${nombre} \u{1F4E9}
 Aquí está tu invitación:
 ${link}`;
 
