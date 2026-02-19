@@ -28,7 +28,7 @@ paginas[0].classList.add("activa");
    PARÁMETROS URL
 ========================= */
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxbG1ro6pd-8BIRsijk772jmvQ0UN9n_KFLnvqPrdrksqlBhlII30EjSeEuuNTFHtrC/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzUXO0OUn3tzEQHmuSKSG_4OZyXpN9uhxh2CbaMSDg3qoezEVigrnLewNo2f1mhvnc8Gw/exec";
 const MI_NUMERO = "50230988019";
 
 const params = new URLSearchParams(window.location.search);
