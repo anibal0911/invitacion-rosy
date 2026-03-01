@@ -26,6 +26,16 @@ function cerrarModal(){
     },400);
 }
 
+/*CONTROL DE VISIBILIDAD*/
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        musica.pause();
+    } else {
+        if (localStorage.getItem("audioElegido") === "si") {
+            musica.play().catch(()=>{});
+        }
+    }
+});
 
 
 /* =========================
