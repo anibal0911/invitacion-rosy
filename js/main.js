@@ -116,8 +116,10 @@ verificarConfirmacion();
 if(btn){
 btn.addEventListener("click", async ()=>{
 
-const mensaje = `Hola Rosy y Kevin \u{1F48D} \u{2728}
+const mensaje = `Hola Rosy y Santiago \u{1F48D} \u{2728}
+
 Confirmo mi asistencia:
+
 Nombre: ${nombre}
 Lugares: ${lugares}`;
 
@@ -150,7 +152,7 @@ btn.style.display = "none";
    CONTADOR
 ========================= */
 
-const fechaEvento = new Date("March 28, 2026 15:00:00").getTime();
+const fechaEvento = new Date("March 28, 2026 14:00:00").getTime();
 const fechaDiaBoda = new Date("March 28, 2026 00:00:00").getTime();
 const contadorEl = document.getElementById("contador");
 
