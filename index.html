@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Invitación de boda de Rosy y Kevin - 28 de Marzo 2026">
+		<title>Nuestra Boda</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display:wght@400;600&family=Delius+Swash+Caps&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+		<link rel="preload" as="image" href="files/fondo.jpg">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<!-- POPUP AUDIO -->
+		<div id="audioModal" class="audio-modal">
+		  <div class="audio-card">
+		    <h2>¿Cómo deseas ver la invitación?</h2>
+		    <p>Elige si deseas vivir la experiencia con música de fondo.</p>
+
+		    <div class="audio-buttons">
+		      <button id="btnConAudio" class="btn-audio principal">
+		        Con Audio
+		      </button>
+		      <button id="btnSinAudio" class="btn-audio secundario">
+		        Sin Audio
+		      </button>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- AUDIO -->
+		<audio id="musicaFondo" loop>
+			<source src="files/musica.mp3" type="audio/mpeg">
+		</audio>
+
+		<div class="container">
+
+			<!-- PORTADA -->
+			<section class="pagina portada">
+				<div class="overlay"></div>
+				<div class="contenido frase-portada">
+					<div class="icono-anillos">
+						<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+				  			<!-- Definición de brillo -->
+				  			<defs>
+								<filter id="glow">
+								<feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+								<feMerge>
+									<feMergeNode in="coloredBlur"/>
+									<feMergeNode in="SourceGraphic"/>
+								</feMerge>
+								</filter>
+							</defs>
+							<!-- Anillo izquierdo -->
+				  			<circle cx="75" cy="80" r="40"
+								stroke="white"
+								stroke-width="6"
+								fill="none"/>
+							<!-- Anillo derecho -->
+							<circle cx="115" cy="80" r="40"
+								stroke="white"
+								stroke-width="6"
+								fill="none"/>
+							<!-- Diamante -->
+							<polygon points="115,25 105,45 125,45"
+								fill="white"
+								filter="url(#glow)"/>
+							<!-- Brillos -->
+							<line x1="115" y1="20" x2="115" y2="10"
+								stroke="white"
+								stroke-width="2"
+								filter="url(#glow)"/>
+							<line x1="105" y1="30" x2="95" y2="25"
+								stroke="white"
+								stroke-width="2"
+								filter="url(#glow)"/>
+							<line x1="125" y1="30" x2="135" y2="25"
+								stroke="white"
+								stroke-width="2"
+								filter="url(#glow)"/>
+						</svg>
+					</div>
+					<p class="frase">"Por tanto, lo que Dios ha unido, que no lo separe el hombre."</p>
+					<p class="frase">Marcos 10:9</p>
+				</div>
+				<div class="contenido galeria">
+					<img src="files/01.jpeg" alt="Rosy y Kevin">
+					<img src="files/02.jpeg" alt="Rosy y Kevin">
+					<img src="files/03.jpeg" alt="Rosy y Kevin">
+				</div>
+			</section>
+
+			<!-- PETICION -->
+			<section class="pagina peticion">
+				<div class="contenido frase-peticion">
+					<p class="intro">
+			            Con la alegría que llena nuestros corazones y confiando en la bendición de Dios,
+			        </p>
+
+			        <p class="subtitulo">Nuestros padres:</p>
+
+			        <p class="nombres">
+			            <strong>Marcos Mulul Carrillo †</strong> y 
+			            <strong>Vilma Consuelo Chávez</strong>
+			        </p>
+
+			        <p class="conector">junto con</p>
+
+			        <p class="nombres">
+			            <strong>Jorge Augusto Andrade Méndez</strong> y 
+			            <strong>María Concepción del Águila Saballa</strong>
+			        </p>
+
+			        <p class="cierre">
+			            Tienen el honor de invitarte a la ceremonia religiosa donde uniremos nuestras vidas 
+			            en santo matrimonio ante el altar de nuestro Señor Jesucristo.
+			        </p>
+				</div>
+			</section>
+
+			<!-- DETALLES --->
+			<section class="pagina">
+				<div class="contenido textodetalles">
+
+					<h2 class="subtitulo-casamos">NOS CASAMOS</h2>
+
+					<div class="nombres-novios">
+						<h1 class="novios">
+							<span class="nombre">Rosy</span>
+							<span class="amp">&</span>
+							<span class="nombre">Kevin</span>
+						</h1>
+					</div>
+
+					<div class="linea-separadora"></div>
+
+					<div class="detalle-item">
+						<h3>Fecha</h3>
+						<p>28 Marzo 2026</p>
+					</div>
+					
+					<div class="linea-separadora"></div>
+					<div id="contador" class="contador"></div>
+
+					<div class="detalle-item">
+						<h3>Hora</h3>
+						<p>3:00 PM</p>
+					</div>
+
+					<div class="detalle-item">
+						<h3>Lugar</h3>
+						<p>Finca El Kerel, <br>
+						Las Anonas, San José Pinula</p>
+						<div class="botones-mapa">
+							<a href="https://www.waze.com/en/live-map/directions/gt/guatemala/san-jose-pinula/finca-el-kerel?place=ChIJ01hkgiS7iYURTQtdMXnyA_c" target="_blank" class="btn">
+							Ver en Waze
+							</a>
+
+							<a href="https://maps.app.goo.gl/99cnVygY5CkaTef67" target="_blank" class="btn">
+							Ver en Maps
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ----------CONFIRMACION---------- -->
+
+			<section class="pagina">
+				<div class="contenido tarjeta-rsvp">
+
+					<h2 class="titulo-rsvp">¡Estás invitado!</h2>
+
+					<p class="texto-rsvp">
+						Tu presencia es el mejor regalo que podemos recibir, pero para preparar todo con amor y que nadie falte, necesitamos que nos ayudes contándonos si podrás acompañarnos.
+					</p>
+
+					<h3 id="nombreInvitado" class="nombre-invitado"></h3>
+
+					<p class="lugares">
+						Hemos reservado 
+						<strong id="lugaresInvitado"></strong>
+						espacios para ti.
+					</p>
+
+					<p class="fecha-limite">
+						Por favor confirma antes del: <strong>15 de marzo de 2026</strong>
+					</p>
+
+					<p id="mensajeConfirmado" class="estado"></p>
+
+					<button id="btnConfirmar" class="btn btn-confirmar">
+						Confirmar asistencia
+					</button>
+
+					<p id="estadoConfirmacion" class="estado"></p>
+
+				</div>
+			</section>
+
+
+			<!-- --------- CIERRE -------------- -->
+
+			<section class="pagina">
+				<div class="contenido tarjeta-cierre">
+
+				    <p class="versiculo">
+				      “El que halla esposa halla el bien, y alcanza la benevolencia de Jehová.”
+				    </p>
+
+				    <p class="referencia">
+				      Proverbios 18:22
+				    </p>
+
+				    <div class="linea-separadora"></div>
+
+				    <p class="mensaje-final">
+				      Les esperamos con todo nuestro corazón para adorar a Dios y celebrar
+				      su amor manifestado en nuestras vidas.
+				    </p>
+
+				    <p class="bendicion">
+				      ¡Dios les bendiga!
+				    </p>
+
+				    <div class="linea-separadora"></div>
+
+					<p class="firma">
+						Con cariño,<br>
+						Rosy & Kevin
+					</p>
+
+				</div>
+			</section>
+		</div>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
